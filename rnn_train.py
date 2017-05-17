@@ -46,9 +46,10 @@ learning_rate = 0.001  # fixed learning rate
 dropout_pkeep = 1.0    # no dropout
 
 # load data, either shakespeare, or the Python source of Tensorflow itself
-shakedir = "shakespeare/*.txt"
+#shakedir = "shakespeare/*.txt"
 # shakedir = "../tensorflow/**/*.py"
-codetext, valitext, bookranges = txt.read_data_files(shakedir, validation=True)
+masaldir = "masal/*.txt"
+codetext, valitext, bookranges = txt.read_data_files(masaldir, validation=True)
 
 # display some stats on the data
 epoch_size = len(codetext) // (BATCHSIZE * SEQLEN)
